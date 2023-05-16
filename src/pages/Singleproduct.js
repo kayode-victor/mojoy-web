@@ -18,6 +18,7 @@ const Singleproduct = () => {
   };
 
   const [orderedProduct, setOrderProduct] = useState(true);
+  console.log(setOrderProduct);
   return (
     <>
       <Meta title={"Hp Omen 16 - B0234TX (i7) "} />

@@ -19,6 +19,7 @@ const Contact = () => {
         <div className="row">
           <div className="col-12">
             <iframe
+              title="Mojoy Computers Location"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.4198751140207!2d3.335353569296202!3d6.594623307771177!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b92273801b885%3A0x2961cfdc611b8d39!2sMojoy%20Computers!5e0!3m2!1sen!2sng!4v1683891863348!5m2!1sen!2sng"
               width="600"
               height="450"
@@ -28,6 +29,7 @@ const Contact = () => {
               referrerPolicy="no-referrer-when-downgrade"
             ></iframe>
           </div>
+
           <div className="col-12 mt-4">
             <div className="contact-inner-wrapper d-flex justify-content-between">
               <div>
