@@ -44,7 +44,7 @@ const Apple = () => {
                 ></button>
               </div>
               <div class="carousel-inner">
-                <div class="carousel-item active">
+                <div class="carousel-item active" data-bs-interval="10000">
                   <img
                     src="https://i.pinimg.com/originals/8e/f7/26/8ef726ffe903afa19aa545e23f3b9c72.png"
                     class="d-block w-100"
@@ -58,7 +58,7 @@ const Apple = () => {
                     </p>
                   </div>
                 </div>
-                <div class="carousel-item">
+                <div class="carousel-item" data-bs-interval="10000">
                   <img
                     src="https://i.pinimg.com/originals/8e/f7/26/8ef726ffe903afa19aa545e23f3b9c72.png"
                     class="d-block w-100"
@@ -72,7 +72,7 @@ const Apple = () => {
                     </p>
                   </div>
                 </div>
-                <div class="carousel-item">
+                <div class="carousel-item" data-bs-interval="10000">
                   <img
                     src="https://i.pinimg.com/originals/8e/f7/26/8ef726ffe903afa19aa545e23f3b9c72.png"
                     class="d-block w-100"

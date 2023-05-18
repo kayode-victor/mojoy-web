@@ -25,6 +25,7 @@ import Asus from "./pages/Asus";
 import Apple from "./pages/Apple";
 import Dell from "./pages/Dell";
 import Lenovo from "./pages/Lenovo";
+import FAQ from "./pages/FAQ";
 
 function App() {
   return (
@@ -59,6 +60,8 @@ function App() {
             <Route path="shipping-policy" element={<Shippingpolicy />} />
             <Route path="refund-policy" element={<Refundpolicy />} />
             <Route path="terms-and-condition" element={<Termandcondition />} />
+
+            <Route path="faq" element={<FAQ />} />
           </Route>
 
           <Route path="checkout" element={<Checkout />} />

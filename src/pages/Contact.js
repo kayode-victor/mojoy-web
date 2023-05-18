@@ -33,7 +33,7 @@ const Contact = () => {
           <div className="col-12 mt-4">
             <div className="contact-inner-wrapper d-flex justify-content-between">
               <div>
-                <h3 className="contact-title mb-4">Contact</h3>
+                <h3 className="contact-title mb-4">Send Us A message</h3>
                 <form action="" className="d-flex flex-column gap-15">
                   <div>
                     <input
@@ -59,7 +59,7 @@ const Contact = () => {
                   <div>
                     <textarea
                       className="form-control"
-                      placeholder="Comments"
+                      placeholder="Message"
                       id="exampleFormControlTextarea1"
                       rows="3"
                     ></textarea>

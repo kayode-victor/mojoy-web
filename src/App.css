@@ -31,6 +31,9 @@ a {
 .gap-15 {
   gap: 15px;
 }
+.gap-20 {
+  gap: 20px;
+}
 .gap-30 {
   gap: 30px;
 }
@@ -233,7 +236,7 @@ footer .input-group-text {
 }
 .footer-middle address,
 .footer-middle p {
-  font-size: 12px;
+  font-size: 14px;
   margin: 2px;
 }
 .social_icons a:hover {
@@ -587,6 +590,9 @@ footer .input-group-text {
 
 .gr-3 {
   width: 32%;
+}
+.tag {
+  border: 1px solid var(--color-header);
 }
 
 /*Branded Store*/

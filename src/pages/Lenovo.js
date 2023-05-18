@@ -43,7 +43,7 @@ const Lenovo = () => {
                 ></button>
               </div>
               <div class="carousel-inner">
-                <div class="carousel-item active">
+                <div class="carousel-item active" data-bs-interval="10000">
                   <img
                     src="https://i0.wp.com/rsgadgets.com/wp-content/uploads/2021/07/Lenovo-Banner.jpg?fit=1920%2C600&ssl=1"
                     class="d-block w-100"
@@ -57,7 +57,7 @@ const Lenovo = () => {
                     </p>
                   </div>
                 </div>
-                <div class="carousel-item">
+                <div class="carousel-item" data-bs-interval="10000">
                   <img
                     src="https://i0.wp.com/rsgadgets.com/wp-content/uploads/2021/07/Lenovo-Banner.jpg?fit=1920%2C600&ssl=1"
                     class="d-block w-100"
@@ -71,7 +71,7 @@ const Lenovo = () => {
                     </p>
                   </div>
                 </div>
-                <div class="carousel-item">
+                <div class="carousel-item" data-bs-interval="10000">
                   <img
                     src="https://i0.wp.com/rsgadgets.com/wp-content/uploads/2021/07/Lenovo-Banner.jpg?fit=1920%2C600&ssl=1"
                     class="d-block w-100"

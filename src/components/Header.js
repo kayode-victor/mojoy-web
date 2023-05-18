@@ -134,7 +134,7 @@ const Header = () => {
                   </div>
                 </div>
                 <div className="menu-links">
-                  <div className="d-flex align-items-center gap-15">
+                  <div className="d-flex align-items-center gap-20">
                     <NavLink to="hp">Hp</NavLink>
                     <NavLink to="asus">Asus</NavLink>
                     <NavLink to="lenovo">Lenovo</NavLink>
@@ -142,7 +142,7 @@ const Header = () => {
                     <NavLink to="apple">Apple</NavLink>
                     <NavLink to="product">Our Store</NavLink>
                     <NavLink to="blog">Blogs</NavLink>
-                    <NavLink to="contact">Contact</NavLink>
+                    <NavLink to="contact">Contact Us</NavLink>
                   </div>
                 </div>
               </div>

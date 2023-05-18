@@ -38,7 +38,7 @@ const OurStore = () => {
                       id=""
                     />
                     <label className="form-check-label" htmlFor="">
-                      In Stock (1)
+                      In Stock
                     </label>
                   </div>
                   <div className="form-check">
@@ -49,7 +49,7 @@ const OurStore = () => {
                       id=""
                     />
                     <label className="form-check-label" htmlFor="">
-                      out of Stock(0)
+                      Out of Stock
                     </label>
                   </div>
                 </div>
@@ -96,37 +96,37 @@ const OurStore = () => {
               <h3 className="filter-title">Product Tags</h3>
               <div>
                 <div className="product-tags d-flex flex-wrap align-items-center gap-10">
-                  <span className="badge bg-light text-secondary rounded-3 py-2 px-1">
+                  <span className="tag badge bg-light text-secondary rounded-3 py-2 px-1">
                     Headphone
                   </span>
-                  <span className="badge bg-light text-secondary rounded-3 py-2 px-1">
+                  <span className="tag badge bg-light  text-secondary rounded-3 py-2 px-1">
                     Laptop
                   </span>
-                  <span className="badge bg-light text-secondary rounded-3 py-2 px-1">
+                  <span className="tag badge bg-light text-secondary rounded-3 py-2 px-1">
                     Phone
                   </span>
-                  <span className="badge bg-light text-secondary rounded-3 py-2 px-1">
+                  <span className="tag badge bg-light text-secondary rounded-3 py-2 px-1">
                     iPhone
                   </span>
-                  <span className="badge bg-light text-secondary rounded-3 py-2 px-1">
+                  <span className="tag badge bg-light text-secondary rounded-3 py-2 px-1">
                     All-in-one
                   </span>
-                  <span className="badge bg-light text-secondary rounded-3 py-2 px-1">
+                  <span className="tag badge bg-light text-secondary rounded-3 py-2 px-1">
                     Gaming-PC
                   </span>
-                  <span className="badge bg-light text-secondary rounded-3 py-2 px-1">
+                  <span className="tag badge bg-light text-secondary rounded-3 py-2 px-1">
                     Laptop-Bags
                   </span>
-                  <span className="badge bg-light text-secondary rounded-3 py-2 px-1">
+                  <span className="tag badge bg-light text-secondary rounded-3 py-2 px-1">
                     Mouse
                   </span>
-                  <span className="badge bg-light text-secondary rounded-3 py-2 px-1">
+                  <span className="tag badge bg-light text-secondary rounded-3 py-2 px-1">
                     Printers
                   </span>
-                  <span className="badge bg-light text-secondary rounded-3 py-2 px-1">
+                  <span className="tag badge bg-light text-secondary rounded-3 py-2 px-1">
                     Gaming Pad
                   </span>
-                  <span className="badge bg-light text-secondary rounded-3 py-2 px-1">
+                  <span className="tag badge bg-light text-secondary rounded-3 py-2 px-1">
                     Ps-4
                   </span>
                 </div>

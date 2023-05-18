@@ -42,12 +42,12 @@ const Footer = () => {
       <footer className="footer-middle">
         <div className="container-xxl py-2">
           <div className="row">
-            <div className="col-4">
+            <div className="col-6">
               <h5>Contact Us</h5>
               <div>
                 <address className="text-white">
-                  13 Oshitelu St, Computer Village
-                  <br /> 101233 <br /> Lagos, Nigeria
+                  13 Oshitelu St, Computer Village , 101233 <br /> Lagos,
+                  Nigeria
                 </address>
                 <a className="text-white d-block " href="tel:+2348023636583">
                   <p>(+234)802-363-6583</p>
@@ -97,18 +97,15 @@ const Footer = () => {
             <div className="col-3">
               <h5>Account</h5>
               <div className="footer-links d-flex flex-column">
-                <Link className="text-white py-1 ">About Us</Link>
-                <Link className="text-white py-1 ">FAQ</Link>
-                <Link className="text-white py-1 ">Contact</Link>
-              </div>
-            </div>
-            <div className="col-2 ">
-              <h5>Links</h5>
-              <div className="footer-links d-flex flex-column">
-                <Link className="text-white py-1 ">Laptops</Link>
-                <Link className="text-white py-1 ">Desktops</Link>
-                <Link className="text-white py-1 ">All-in-One</Link>
-                <Link className="text-white py-1 ">Assecossories</Link>
+                <Link to="about" className="text-white py-1 ">
+                  About Us
+                </Link>
+                <Link to="faq" className="text-white py-1 ">
+                  FAQ
+                </Link>
+                <Link to="contact" className="text-white py-1 ">
+                  Contact Us
+                </Link>
               </div>
             </div>
           </div>

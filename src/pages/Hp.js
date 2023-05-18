@@ -43,7 +43,7 @@ const Hp = () => {
                 ></button>
               </div>
               <div class="carousel-inner">
-                <div class="carousel-item active">
+                <div class="carousel-item active" data-bs-interval="10000">
                   <img
                     src="https://i0.wp.com/nasilemaktech.com/wp-content/uploads/2023/01/HP-Banner.jpg"
                     class="d-block w-100"
@@ -57,7 +57,7 @@ const Hp = () => {
                     </p>
                   </div>
                 </div>
-                <div class="carousel-item">
+                <div class="carousel-item" data-bs-interval="10000">
                   <img
                     src="https://i0.wp.com/nasilemaktech.com/wp-content/uploads/2023/01/HP-Banner.jpg"
                     class="d-block w-100"
@@ -71,7 +71,7 @@ const Hp = () => {
                     </p>
                   </div>
                 </div>
-                <div class="carousel-item">
+                <div class="carousel-item" data-bs-interval="10000">
                   <img
                     src="https://i0.wp.com/nasilemaktech.com/wp-content/uploads/2023/01/HP-Banner.jpg"
                     class="d-block w-100"
