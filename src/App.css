@@ -113,11 +113,11 @@ a {
   background-color: var(--color-main);
 }
 .header-upper .header-upper-links img {
-  width: 25px;
-  height: 25px;
+  width: 30px;
+  height: 30px;
 }
 .header-upper .header-upper-links p {
-  font-size: 12px;
+  font-size: 13px;
   color: white;
 }
 

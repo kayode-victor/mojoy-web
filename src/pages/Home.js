@@ -268,6 +268,14 @@ const Home = () => {
                     alt="brands"
                   />
                 </div>
+                <div className="mx-4 w-25">
+                  <img
+                    className="mt-4"
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/ASUS_Logo.svg/2560px-ASUS_Logo.svg.png"
+                    style={{ width: "100px" }}
+                    alt="brands"
+                  />
+                </div>
               </Marquee>
             </div>
           </div>

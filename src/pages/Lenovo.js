@@ -3,14 +3,117 @@ import BreadCrumb from "../components/BreadCrumb";
 import Meta from "../components/Meta";
 import ProductCard from "../components/ProductCard";
 import Container from "../components/Container";
-
-const OurStore = () => {
+import gr from "../images/gr.svg";
+import gr2 from "../images/gr2.svg";
+import gr3 from "../images/gr3.svg";
+const Lenovo = () => {
   const [grid, setGrid] = useState(3);
-
   return (
     <>
-      <Meta title={"Our Store"} />
-      <BreadCrumb title="Our Store" />
+      <Meta title={"Lenovo"} />
+      <BreadCrumb title="Lenovo" />
+      <Container class1="banner-wrapper home-wrapper-2 py-1">
+        <div className="row">
+          <div className="col-12">
+            <div
+              id="carouselExampleCaptions"
+              class="carousel slide"
+              data-bs-ride="carousel"
+            >
+              <div class="carousel-indicators">
+                <button
+                  type="button"
+                  data-bs-target="#carouselExampleCaptions"
+                  data-bs-slide-to="0"
+                  class="active"
+                  aria-current="true"
+                  aria-label="Slide 1"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#carouselExampleCaptions"
+                  data-bs-slide-to="1"
+                  aria-label="Slide 2"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#carouselExampleCaptions"
+                  data-bs-slide-to="2"
+                  aria-label="Slide 3"
+                ></button>
+              </div>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img
+                    src="https://i0.wp.com/rsgadgets.com/wp-content/uploads/2021/07/Lenovo-Banner.jpg?fit=1920%2C600&ssl=1"
+                    class="d-block w-100"
+                    alt="..."
+                  />
+                  <div class="carousel-caption d-none d-md-block">
+                    <h5>First slide label</h5>
+                    <p>
+                      Some representative placeholder content for the first
+                      slide.
+                    </p>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="https://i0.wp.com/rsgadgets.com/wp-content/uploads/2021/07/Lenovo-Banner.jpg?fit=1920%2C600&ssl=1"
+                    class="d-block w-100"
+                    alt="..."
+                  />
+                  <div class="carousel-caption d-none d-md-block">
+                    <h5>Second slide label</h5>
+                    <p>
+                      Some representative placeholder content for the second
+                      slide.
+                    </p>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="https://i0.wp.com/rsgadgets.com/wp-content/uploads/2021/07/Lenovo-Banner.jpg?fit=1920%2C600&ssl=1"
+                    class="d-block w-100"
+                    alt="..."
+                  />
+                  <div class="carousel-caption d-none d-md-block">
+                    <h5>Third slide label</h5>
+                    <p>
+                      Some representative placeholder content for the third
+                      slide.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="prev"
+              >
+                <span
+                  class="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="next"
+              >
+                <span
+                  class="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </Container>
       <Container class1="store-wrapper home-wrapper-2 py-2">
         <div className="row">
           <div className="col-3">
@@ -18,10 +121,9 @@ const OurStore = () => {
               <h3 className="filter-title">Shop By Categories</h3>
               <div>
                 <ul className="ps-0">
-                  <li>Watch</li>
+                  <li>Bag</li>
                   <li>Laptop</li>
                   <li>Desktop</li>
-                  <li>Headset</li>
                 </ul>
               </div>
             </div>
@@ -74,62 +176,6 @@ const OurStore = () => {
                     <label htmlFor="floatingInput1">To</label>
                   </div>
                 </div>
-                <h5 className="sub-title">Brand</h5>
-                <div>
-                  <div className="form-floating">
-                    <select
-                      className="form-select"
-                      id="floatingSelectGrid"
-                      aria-label="Floating label select example"
-                    >
-                      <option defaultValue="">none</option>
-                      <option value="1">Hp</option>
-                      <option value="2">Dell</option>
-                      <option value="3">Asus</option>
-                    </select>
-                    <label htmlFor="floatingSelectGrid">Select Brand</label>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="filter-card mb-3">
-              <h3 className="filter-title">Product Tags</h3>
-              <div>
-                <div className="product-tags d-flex flex-wrap align-items-center gap-10">
-                  <span className="badge bg-light text-secondary rounded-3 py-2 px-1">
-                    Headphone
-                  </span>
-                  <span className="badge bg-light text-secondary rounded-3 py-2 px-1">
-                    Laptop
-                  </span>
-                  <span className="badge bg-light text-secondary rounded-3 py-2 px-1">
-                    Phone
-                  </span>
-                  <span className="badge bg-light text-secondary rounded-3 py-2 px-1">
-                    iPhone
-                  </span>
-                  <span className="badge bg-light text-secondary rounded-3 py-2 px-1">
-                    All-in-one
-                  </span>
-                  <span className="badge bg-light text-secondary rounded-3 py-2 px-1">
-                    Gaming-PC
-                  </span>
-                  <span className="badge bg-light text-secondary rounded-3 py-2 px-1">
-                    Laptop-Bags
-                  </span>
-                  <span className="badge bg-light text-secondary rounded-3 py-2 px-1">
-                    Mouse
-                  </span>
-                  <span className="badge bg-light text-secondary rounded-3 py-2 px-1">
-                    Printers
-                  </span>
-                  <span className="badge bg-light text-secondary rounded-3 py-2 px-1">
-                    Gaming Pad
-                  </span>
-                  <span className="badge bg-light text-secondary rounded-3 py-2 px-1">
-                    Ps-4
-                  </span>
-                </div>
               </div>
             </div>
           </div>
@@ -162,7 +208,7 @@ const OurStore = () => {
                       onClick={() => {
                         setGrid(3);
                       }}
-                      src="images/gr3.svg"
+                      src={gr3}
                       className=" d-block imag-fluid"
                       alt="grid"
                     />
@@ -170,7 +216,7 @@ const OurStore = () => {
                       onClick={() => {
                         setGrid(6);
                       }}
-                      src="images/gr2.svg"
+                      src={gr2}
                       className="d-block imag-fluid"
                       alt="grid"
                     />
@@ -178,7 +224,7 @@ const OurStore = () => {
                       onClick={() => {
                         setGrid(12);
                       }}
-                      src="images/gr.svg"
+                      src={gr}
                       className="d-block imag-fluid"
                       alt="grid"
                     />
@@ -201,4 +247,4 @@ const OurStore = () => {
   );
 };
 
-export default OurStore;
+export default Lenovo;

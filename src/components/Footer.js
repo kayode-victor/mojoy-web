@@ -12,7 +12,7 @@ const Footer = () => {
   return (
     <>
       <footer className="footer-top">
-        <div className="container-xxl py-3">
+        <div className="container-xxl p-5">
           <div className="row align-items-center">
             <div className=" d-flex align-items-center">
               <div className="col-5">

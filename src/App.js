@@ -20,7 +20,11 @@ import Termandcondition from "./pages/Termandcondition";
 import Singleproduct from "./pages/Singleproduct";
 import Cart from "./pages/Cart";
 import Checkout from "./pages/Checkout";
-import Brandstore from "./pages/Brandstore";
+import Hp from "./pages/Hp";
+import Asus from "./pages/Asus";
+import Apple from "./pages/Apple";
+import Dell from "./pages/Dell";
+import Lenovo from "./pages/Lenovo";
 
 function App() {
   return (
@@ -32,8 +36,17 @@ function App() {
             <Route path="about" element={<About />} />
             <Route path="contact" element={<Contact />} />
             <Route path="product" element={<OurStore />} />
-            <Route path="store/:id" element={<Brandstore />} />
+            <Route path="hp" element={<Hp />} />
+            <Route path="asus" element={<Asus />} />
+            <Route path="apple" element={<Apple />} />
+            <Route path="dell" element={<Dell />} />
+            <Route path="lenovo" element={<Lenovo />} />
             <Route path="product/:id" element={<Singleproduct />} />
+            <Route path="hp/:id" element={<Singleproduct />} />
+            <Route path="asus/:id" element={<Singleproduct />} />
+            <Route path="lenovo/:id" element={<Singleproduct />} />
+            <Route path="dell/:id" element={<Singleproduct />} />
+            <Route path="apple/:id" element={<Singleproduct />} />
             <Route path="blog" element={<Blog />} />
             <Route path="blog/:id" element={<Singleblog />} />
             <Route path="wishlist" element={<Wishlist />} />

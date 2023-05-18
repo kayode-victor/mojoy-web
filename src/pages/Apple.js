@@ -7,30 +7,124 @@ import gr from "../images/gr.svg";
 import gr2 from "../images/gr2.svg";
 import gr3 from "../images/gr3.svg";
 
-const Brandstore = () => {
+const Apple = () => {
   const [grid, setGrid] = useState(3);
   return (
     <>
-      <Meta title={"Hp"} />
-      <BreadCrumb title="Hp" />
-      <Container class1="store-wrapper home-wrapper-2 py-5">
+      <Meta title={"Apple"} />
+      <BreadCrumb title="Apple" />
+      <Container class1="banner-wrapper home-wrapper-2 py-1">
+        <div className="row">
+          <div className="col-12">
+            <div
+              id="carouselExampleCaptions"
+              class="carousel slide"
+              data-bs-ride="carousel"
+            >
+              <div class="carousel-indicators">
+                <button
+                  type="button"
+                  data-bs-target="#carouselExampleCaptions"
+                  data-bs-slide-to="0"
+                  class="active"
+                  aria-current="true"
+                  aria-label="Slide 1"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#carouselExampleCaptions"
+                  data-bs-slide-to="1"
+                  aria-label="Slide 2"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#carouselExampleCaptions"
+                  data-bs-slide-to="2"
+                  aria-label="Slide 3"
+                ></button>
+              </div>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img
+                    src="https://i.pinimg.com/originals/8e/f7/26/8ef726ffe903afa19aa545e23f3b9c72.png"
+                    class="d-block w-100"
+                    alt="..."
+                  />
+                  <div class="carousel-caption d-none d-md-block">
+                    <h5>First slide label</h5>
+                    <p>
+                      Some representative placeholder content for the first
+                      slide.
+                    </p>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="https://i.pinimg.com/originals/8e/f7/26/8ef726ffe903afa19aa545e23f3b9c72.png"
+                    class="d-block w-100"
+                    alt="..."
+                  />
+                  <div class="carousel-caption d-none d-md-block">
+                    <h5>Second slide label</h5>
+                    <p>
+                      Some representative placeholder content for the second
+                      slide.
+                    </p>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="https://i.pinimg.com/originals/8e/f7/26/8ef726ffe903afa19aa545e23f3b9c72.png"
+                    class="d-block w-100"
+                    alt="..."
+                  />
+                  <div class="carousel-caption d-none d-md-block">
+                    <h5>Third slide label</h5>
+                    <p>
+                      Some representative placeholder content for the third
+                      slide.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="prev"
+              >
+                <span
+                  class="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="next"
+              >
+                <span
+                  class="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </Container>
+      <Container class1="store-wrapper home-wrapper-2 py-2">
         <div className="row">
           <div className="col-3">
-            <div className="logo-banner">
-              <img
-                className="logo"
-                src="https://cdn.cdnlogo.com/logos/h/13/hp.png"
-                alt="logo"
-              />
-            </div>
             <div className="filter-card mb-3">
               <h3 className="filter-title">Shop By Categories</h3>
               <div>
                 <ul className="ps-0">
-                  <li>All-in-one</li>
+                  <li>Bag</li>
                   <li>Laptop</li>
                   <li>Desktop</li>
-                  <li>Printer</li>
                 </ul>
               </div>
             </div>
@@ -82,44 +176,6 @@ const Brandstore = () => {
                     />
                     <label htmlFor="floatingInput1">To</label>
                   </div>
-                </div>
-              </div>
-            </div>
-            <div className="filter-card mb-3">
-              <h3 className="filter-title">Product Tags</h3>
-              <div>
-                <div className="product-tags d-flex flex-wrap align-items-center gap-10">
-                  <span className="badge bg-light text-secondary rounded-3 py-2 px-1">
-                    Headphone
-                  </span>
-                  <span className="badge bg-light text-secondary rounded-3 py-2 px-1">
-                    Laptop
-                  </span>
-                  <span className="badge bg-light text-secondary rounded-3 py-2 px-1">
-                    Desktop
-                  </span>
-
-                  <span className="badge bg-light text-secondary rounded-3 py-2 px-1">
-                    All-in-one
-                  </span>
-                  <span className="badge bg-light text-secondary rounded-3 py-2 px-1">
-                    Gaming-PC
-                  </span>
-                  <span className="badge bg-light text-secondary rounded-3 py-2 px-1">
-                    Laptop-Bags
-                  </span>
-                  <span className="badge bg-light text-secondary rounded-3 py-2 px-1">
-                    Mouse
-                  </span>
-                  <span className="badge bg-light text-secondary rounded-3 py-2 px-1">
-                    Printers
-                  </span>
-                  <span className="badge bg-light text-secondary rounded-3 py-2 px-1">
-                    Keyboard
-                  </span>
-                  <span className="badge bg-light text-secondary rounded-3 py-2 px-1">
-                    scanner
-                  </span>
                 </div>
               </div>
             </div>
@@ -178,7 +234,7 @@ const Brandstore = () => {
               </div>
             </div>
             <div className="products-list py-3">
-              <div className="d-flex flex-wrap gap-3">
+              <div className="d-flex flex-wrap gap-15 justify-content-between">
                 <ProductCard grid={grid} />
                 <ProductCard grid={grid} />
                 <ProductCard grid={grid} />
@@ -191,4 +247,5 @@ const Brandstore = () => {
     </>
   );
 };
-export default Brandstore;
+
+export default Apple;

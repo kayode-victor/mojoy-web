@@ -1,8 +1,4 @@
 import React, { useState } from "react";
-import Meta from "../components/Meta";
-import BreadCrumb from "../components/BreadCrumb";
-import ProductCard from "../components/ProductCard";
-import ReactImageZoom from "react-image-zoom";
 import ReactStars from "react-rating-stars-component";
 import Color from "../components/Color";
 import { AiOutlineHeart } from "react-icons/ai";
@@ -10,25 +6,20 @@ import { Link } from "react-router-dom";
 import Container from "../components/Container";
 
 const Singleproduct = () => {
-  const props = {
-    width: 400,
-    height: 600,
-    zoomWidth: 600,
-    img: "https://images-na.ssl-images-amazon.com/images/I/81qy1BWunvL._AC_UL600_SR600,600_.jpg",
-  };
-
   const [orderedProduct, setOrderProduct] = useState(true);
   console.log(setOrderProduct);
   return (
     <>
-      <Meta title={"Hp Omen 16 - B0234TX (i7) "} />
-      <BreadCrumb title="Hp Omen 16 - B0234TX (i7)" />
       <Container class1="main-product-wrapper py-5 home-wrapper-2">
         <div className="row">
           <div className="col-6">
             <div className="main-product-image">
               <div>
-                <ReactImageZoom {...props} />
+                <img
+                  src="https://images-na.ssl-images-amazon.com/images/I/81qy1BWunvL._AC_UL600_SR600,600_.jpg"
+                  alt="product"
+                  className="img-fluid w-100"
+                />
               </div>
             </div>
             <div className="other-product-images d-flex flex-wrap gap-15 justify-content-between">
@@ -254,17 +245,6 @@ const Singleproduct = () => {
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-      </Container>
-      <Container class1="Popular-wrapper home-wrapper-2 py-5">
-        <div className="row">
-          <div className="col-12">
-            <h3 className="section-heading">Our Popular Products</h3>
-          </div>
-          <div className="row">
-            <ProductCard />
-            <ProductCard />
           </div>
         </div>
       </Container>

@@ -32,12 +32,12 @@ const Header = () => {
           </div>
         </div>
       </header>
-      <header className="header-upper py-2 px-2">
+      <header className="header-upper py-3 px-5">
         <div className="container-xxl">
           <div className="row align-items-center">
             <div className="col-2">
               <h3>
-                <Link>
+                <Link to="/">
                   <span className="tllogo">Mo</span>
                   <span className="trlogo">joy</span>
                 </Link>
@@ -52,8 +52,8 @@ const Header = () => {
                   aria-label="Search Product Here..."
                   aria-describedby="basic-addon2"
                 />
-                <span className="input-group-text py-1" id="basic-addon2">
-                  <FaSearch className="fs-6" />
+                <span className="input-group-text py-2" id="basic-addon2">
+                  <FaSearch className="fs-5" />
                 </span>
               </div>
             </div>
@@ -103,7 +103,7 @@ const Header = () => {
         <div className="container-xxl">
           <div className="row">
             <div className="col-12">
-              <div className="menu-bottom d-flex align-items-center gap-15">
+              <div className="menu-bottom d-flex align-items-center gap-30">
                 <div>
                   <div className="dropdown">
                     <button
@@ -114,9 +114,7 @@ const Header = () => {
                       aria-expanded="false"
                     >
                       <img src={menu} alt="menu" />
-                      <span className="me-5 d-inline-block">
-                        Shop Categories
-                      </span>
+                      <span className="me-5 d-inline-block">Categories</span>
                     </button>
 
                     <ul
@@ -135,51 +133,16 @@ const Header = () => {
                     </ul>
                   </div>
                 </div>
-
                 <div className="menu-links">
                   <div className="d-flex align-items-center gap-15">
-                    <NavLink to="/">Home</NavLink>
+                    <NavLink to="hp">Hp</NavLink>
+                    <NavLink to="asus">Asus</NavLink>
+                    <NavLink to="lenovo">Lenovo</NavLink>
+                    <NavLink to="dell">Dell</NavLink>
+                    <NavLink to="apple">Apple</NavLink>
                     <NavLink to="product">Our Store</NavLink>
-                  </div>
-                </div>
-                <div>
-                  <div className="dropdown">
-                    <button
-                      className="btn btn-secondary dropdown-toggle bg-transparent border-0 gap-15 d-flex align-items-center "
-                      type="button"
-                      id="dropdownMenuBottom1"
-                      data-bs-toggle="dropdown"
-                      aria-expanded="false"
-                    >
-                      Top Brand
-                    </button>
-
-                    <ul
-                      className="dropdown-menu"
-                      aria-labelledby="dropdownMenuBottom1"
-                    >
-                      <li>
-                        <Link className="dropdown-item" to="store/:id">
-                          Hp
-                        </Link>
-                      </li>
-                      <li>
-                        <Link className="dropdown-item" to="#">
-                          dell
-                        </Link>
-                      </li>
-                      <li>
-                        <Link className="dropdown-item" to="#">
-                          Asus
-                        </Link>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-                <div className="menu-links">
-                  <div className="d-flex align-items-center gap-15">
-                    <NavLink to="/blog">Blogs</NavLink>
-                    <NavLink to="/contact">Contact</NavLink>
+                    <NavLink to="blog">Blogs</NavLink>
+                    <NavLink to="contact">Contact</NavLink>
                   </div>
                 </div>
               </div>
