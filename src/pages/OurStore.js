@@ -18,10 +18,11 @@ const OurStore = () => {
               <h3 className="filter-title">Shop By Categories</h3>
               <div>
                 <ul className="ps-0">
-                  <li>Watch</li>
+                  <li>All-in-One</li>
                   <li>Laptop</li>
                   <li>Desktop</li>
-                  <li>Headset</li>
+                  <li>Printer</li>
+                  <li>Hard-disk</li>
                 </ul>
               </div>
             </div>
