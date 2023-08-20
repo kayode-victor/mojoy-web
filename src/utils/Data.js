@@ -60,3 +60,34 @@ export const bannerdata = {
     },
   ],
 };
+export const advertisementDataSets = [
+  {
+    id: 1,
+    data: [
+      {
+        productName: "Product 1 Set 1",
+        imageSrc: "images/subbanner-01.png",
+        description: "Description of Product 1 Set 1",
+        pricing: "$19.99",
+        color: "#000",
+        link: "/product1set1",
+      },
+      // Add more items for Set 1
+    ],
+  },
+  {
+    id: 2,
+    data: [
+      {
+        productName: "Product 1 Set 2",
+        imageSrc: "images/subbanner-01.png",
+        description: "Description of Product 1 Set 2",
+        pricing: "$24.99",
+        color: "#ff0340",
+        link: "/product1set2",
+      },
+      // Add more items for Set 2
+    ],
+  },
+  // Add more data sets as needed
+];

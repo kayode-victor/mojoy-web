@@ -1,80 +1,104 @@
 import React from "react";
-import ReactStars from "react-rating-stars-component";
-import { Link, useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import wish from "../images/wish.svg";
-import addcart from "../images/add-cart.svg";
 import view from "../images/view.svg";
+import { useDispatch } from "react-redux";
+import { addToWishlist } from "../features/product/productSlice";
 
 const ProductCard = (props) => {
-  const { grid } = props;
+  const { grid, data } = props;
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
   let location = useLocation();
+  if (!Array.isArray(data)) {
+    return null; // or return a loading state, error message, etc.
+  }
+  const addToWish = (id) => {
+    dispatch(addToWishlist(id));
+  };
   return (
     <>
-      <div
-        className={`${
-          location.pathname === "/product" ||
-          location.pathname.startsWith("/hp") ||
-          location.pathname.startsWith("/asus") ||
-          location.pathname.startsWith("/dell") ||
-          location.pathname.startsWith("/lenovo") ||
-          location.pathname.startsWith("/apple")
-            ? `gr-${grid}`
-            : "col-3"
-        }`}
-      >
-        <Link
-          to={`${location.pathname === "/" ? "product/:id" : ":id"}`}
-          className="product-card position-relative"
-        >
-          <div className="wishlist-icon  position-absolute">
-            <button className="border-0 bg-white">
-              <img src={wish} alt="wishlist" />
-            </button>
-          </div>
-          <div className="product-img w-100 align-items-center">
-            <img
-              src="https://images-na.ssl-images-amazon.com/images/I/81qy1BWunvL._AC_UL600_SR600,600_.jpg"
-              className="img-fluid"
-              alt="productImage"
-            />
-            <img
-              src="https://www.laptop.lk/wp-content/uploads/2022/03/Hp-Omen-16-b0234TX-03.jpg"
-              className="img-fluid"
-              alt="productImage"
-            />
-          </div>
-          <div className="product-details">
-            <h6 className="brand">hp</h6>
-            <h5 className="product-title">Hp Omen 16 - B0234TX (i7)</h5>
-            <ReactStars
-              count={5}
-              size={24}
-              value={4}
-              edit={false}
-              activeColor="#ffd700"
-            />
-            <p className={`description ${grid === 12 ? "d-block" : "d-none"}`}>
-              You’ve got places to go, plays to make, and power to proclaim.
-              With the OMEN by HP 15 Laptop, you can play at your best from
-              anywhere - without sacrificing performance. Keep moving and
-              improving your skills on a compact, portable rig designed to
-              deliver desktop-class graphics performance, total immersion, and
-              easy upgradability.....
-            </p>
-            <p className="price text-dark">₦750,000.00</p>
-          </div>
-          <div className="action-bar position-absolute">
-            <div className="d-flex flex-column gap-10">
-              <button className="border-0 bg-white">
-                <img src={view} alt="view" />
-              </button>
-              <button className="border-0 bg-white">
-                <img src={addcart} alt="addcartiew" />
-              </button>
+      {data.map((item, index) => {
+        return (
+          <div
+            key={index}
+            className={`${
+              location.pathname === "/product" ? `gr-${grid}` : "col-3"
+            }`}
+          >
+            <div className="product-card position-relative bg-white">
+              <div className="product-img">
+                {grid === 12 && (
+                  <>
+                    <img
+                      src={item?.images[0].url}
+                      className="img-fluid"
+                      alt="productImage"
+                      style={{ width: "300px", height: "300px" }}
+                    />
+                    <img
+                      src={item?.images[1].url}
+                      className="img-fluid"
+                      alt="productImage"
+                      style={{ width: "300px", height: "300px" }}
+                    />
+                  </>
+                )}
+                {grid !== 12 && (
+                  <>
+                    <img
+                      src={item?.images[0].url}
+                      className="img-fluid"
+                      alt="productImage"
+                    />
+                    <img
+                      src={item?.images[1].url}
+                      className="img-fluid"
+                      alt="productImage"
+                    />
+                  </>
+                )}
+              </div>
+              <div className="product-details">
+                <h6 className="brand">{item?.brand}</h6>
+                <h5 className="product-title">
+                  {item?.title.substr(0, 30) + "..."}
+                </h5>
+                <p
+                  className={`description ${
+                    grid === 12 ? "d-block" : "d-none"
+                  }`}
+                  dangerouslySetInnerHTML={{
+                    __html: item?.description.substr(0, 300) + "...",
+                  }}
+                ></p>
+                <p className="price text-dark">₦{item?.price}</p>
+              </div>
+              <div className="action-bar position-absolute">
+                <div className="d-flex flex-column gap-15">
+                  <button className="circular-button">
+                    <img
+                      src={wish}
+                      alt="wishlist"
+                      onClick={(e) => {
+                        addToWish(item?._id);
+                      }}
+                    />
+                  </button>
+
+                  <button className="circular-button">
+                    <img
+                      onClick={() => navigate("/product/" + item?._id)}
+                      src={view}
+                      alt="view"
+                    />
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
-        </Link>
-      </div>
+        );
+      })}
     </>
   );
 };

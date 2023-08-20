@@ -2,34 +2,28 @@ import React from "react";
 import ReactStars from "react-rating-stars-component";
 import { Link } from "react-router-dom";
 
-const SpecialProduct = () => {
+const SpecialProduct = (props) => {
+  const { title, brand, price, quantity, image, totalrating, sold, id } = props;
   return (
     <div className="col-6 mb-3">
       <div className="special-product-card">
         <div className="d-flex justify-content-between">
           <div className="col-4 product-img">
-            <img
-              src="https://images-na.ssl-images-amazon.com/images/I/81qy1BWunvL._AC_UL600_SR600,600_.jpg"
-              className="img-fluid"
-              alt="productImage"
-            />
+            <img src={image} className="img-fluid" alt="productImage" />
           </div>
           <div className="special-product-content">
-            <h5 className="brand">hp</h5>
-            <h6 className="title">
-              Hp Omen 15 Gaming,10th Gen Intel Core I7,16GB RAM,1TB SSD, 6GB RTX
-              Graphics,15.6" Win 11
-            </h6>
+            <h5 className="brand">{brand}</h5>
+            <h6 className="title">{title}</h6>
             <ReactStars
               count={5}
               size={24}
-              value={4}
+              value={totalrating}
               edit={false}
               activeColor="#ffd700"
             />
             <p className="price">
-              <span className="red-p">₦625,000.00</span> &nbsp;
-              <strike>₦750,000.00</strike>
+              <span className="red-p">{price}</span> &nbsp;
+              {/* <strike></strike> */}
             </p>
             <div className="discount-till d-flex align-items-center gap-10 ">
               <p className="mb-0">
@@ -42,19 +36,21 @@ const SpecialProduct = () => {
               </div>
             </div>
             <div className="prod-count my-3">
-              <p>Product : 5</p>
+              <p>Product : {quantity}</p>
               <div className="progress">
                 <div
                   className="progress-bar"
                   role="progressbar"
-                  style={{ width: "25%" }}
-                  aria-valuenow="25"
-                  aria-valuemin="0"
-                  aria-valuemax="100"
+                  style={{ width: quantity / quantity + sold * 100 + "%" }}
+                  aria-valuenow={quantity / quantity + sold * 100}
+                  aria-valuemin={quantity}
+                  aria-valuemax={sold + quantity}
                 ></div>
               </div>
             </div>
-            <Link className="button">Add to Cart</Link>
+            <Link className="button" to={"/product/" + id}>
+              View
+            </Link>
           </div>
         </div>
       </div>

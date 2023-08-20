@@ -14,11 +14,11 @@ import Signup from "./pages/Signup";
 import Resetpassword from "./pages/Resetpassword";
 import Singleblog from "./pages/Singleblog";
 import Privacypolicy from "./pages/Privacypolicy";
-import Shippingpolicy from "./pages/Shippingpolicy";
-import Refundpolicy from "./pages/Refundpolicy";
 import Termandcondition from "./pages/Termandcondition";
 import Singleproduct from "./pages/Singleproduct";
 import Cart from "./pages/Cart";
+import Orders from "./pages/Orders";
+import Profile from "./pages/Profile";
 import Checkout from "./pages/Checkout";
 import Hp from "./pages/Hp";
 import Asus from "./pages/Asus";
@@ -26,7 +26,8 @@ import Apple from "./pages/Apple";
 import Dell from "./pages/Dell";
 import Lenovo from "./pages/Lenovo";
 import FAQ from "./pages/FAQ";
-
+import { PrivateRoutes } from "./routing/privateRoutes";
+import { OpenRoutes } from "./routing/openRoutes";
 function App() {
   return (
     <>
@@ -50,21 +51,77 @@ function App() {
             <Route path="apple/:id" element={<Singleproduct />} />
             <Route path="blog" element={<Blog />} />
             <Route path="blog/:id" element={<Singleblog />} />
-            <Route path="wishlist" element={<Wishlist />} />
-            <Route path="cart" element={<Cart />} />
-            <Route path="login" element={<Login />} />
+            <Route
+              path="wishlist"
+              element={
+                <PrivateRoutes>
+                  <Wishlist />
+                </PrivateRoutes>
+              }
+            />
+            <Route
+              path="cart"
+              element={
+                <PrivateRoutes>
+                  <Cart />
+                </PrivateRoutes>
+              }
+            />
+            <Route
+              path="orders"
+              element={
+                <PrivateRoutes>
+                  <Orders />
+                </PrivateRoutes>
+              }
+            />
+            <Route
+              path="profile"
+              element={
+                <PrivateRoutes>
+                  <Profile />
+                </PrivateRoutes>
+              }
+            />
+            <Route
+              path="login"
+              element={
+                <OpenRoutes>
+                  <Login />
+                </OpenRoutes>
+              }
+            />
             <Route path="signup" element={<Signup />} />
-            <Route path="forgot-password" element={<Forgotpassword />} />
-            <Route path="reset-password" element={<Resetpassword />} />
+            <Route
+              path="forgot-password"
+              element={
+                <OpenRoutes>
+                  <Forgotpassword />
+                </OpenRoutes>
+              }
+            />
+            <Route
+              path="reset-password/:token"
+              element={
+                <OpenRoutes>
+                  <Resetpassword />
+                </OpenRoutes>
+              }
+            />
             <Route path="privacy-policy" element={<Privacypolicy />} />
-            <Route path="shipping-policy" element={<Shippingpolicy />} />
-            <Route path="refund-policy" element={<Refundpolicy />} />
             <Route path="terms-and-condition" element={<Termandcondition />} />
 
             <Route path="faq" element={<FAQ />} />
           </Route>
 
-          <Route path="checkout" element={<Checkout />} />
+          <Route
+            path="checkout"
+            element={
+              <PrivateRoutes>
+                <Checkout />
+              </PrivateRoutes>
+            }
+          />
         </Routes>
       </BrowserRouter>
     </>

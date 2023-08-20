@@ -2,48 +2,19 @@ import React from "react";
 import {
   FaFacebookF,
   FaInstagram,
-  FaTwitter,
   FaLinkedin,
+  FaTwitter,
 } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import newsletter from "../images/newsletter.png";
 
 const Footer = () => {
   return (
     <>
-      <footer className="footer-top">
-        <div className="container-xxl p-5">
-          <div className="row align-items-center">
-            <div className=" d-flex align-items-center">
-              <div className="col-5">
-                <div className="footer-top-data d-flex gap-15 align-items-center">
-                  <img src={newsletter} alt="newsletter" />
-                  <p className="mb-0 text-white">Subscribe for Newsletter</p>
-                </div>
-              </div>
-              <div className="col-7">
-                <div className="input-group">
-                  <input
-                    type="text"
-                    className="form-control"
-                    placeholder="Your Email..."
-                    aria-label="Your Email..."
-                    aria-describedby="basic-addon2"
-                  />
-                  <span className="input-group-text" id="basic-addon2">
-                    Subscribe
-                  </span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </footer>
-      <footer className="footer-middle">
-        <div className="container-xxl py-2">
+      <div className="Footer">
+        <div className="container">
           <div className="row">
-            <div className="col-6">
-              <h5>Contact Us</h5>
+            <div className="col-md-6 col-lg-5 col-12 ft-1">
+              <h4 className="text-white">Contact Us</h4>
               <div>
                 <address className="text-white">
                   13 Oshitelu St, Computer Village , 101233 <br /> Lagos,
@@ -74,17 +45,11 @@ const Footer = () => {
                 </div>
               </div>
             </div>
-            <div className="col-3">
-              <h5>Information</h5>
+            <div className="col-md-6 col-lg-3 col-12 ">
+              <h4 className="text-white">Information</h4>
               <div className="footer-links d-flex flex-column">
                 <Link to="/privacy-policy" className="text-white py-1 ">
                   Privacy Policy
-                </Link>
-                <Link to="/refund-policy" className="text-white py-1 ">
-                  Refund Policy
-                </Link>
-                <Link to="/shipping-policy" className="text-white py-1 ">
-                  Shipping Policy
                 </Link>
                 <Link to="/terms-and-condition" className="text-white py-1 ">
                   Terms & Condition
@@ -94,8 +59,8 @@ const Footer = () => {
                 </Link>
               </div>
             </div>
-            <div className="col-3">
-              <h5>Account</h5>
+            <div className="col-md-6 col-lg-4 col-12 ft-3">
+              <h4 className="text-white">Account</h4>
               <div className="footer-links d-flex flex-column">
                 <Link to="about" className="text-white py-1 ">
                   About Us
@@ -110,18 +75,12 @@ const Footer = () => {
             </div>
           </div>
         </div>
-      </footer>
-      <footer className="footer-last">
-        <div className="container-xxl py-2">
-          <div className="row">
-            <div className="col-12">
-              <p className="text-center mb-0 text-white">
-                &copy; {new Date().getFullYear()}; Powered by 93-media
-              </p>
-            </div>
-          </div>
-        </div>
-      </footer>
+      </div>
+      <div className="Last-footer">
+        <p className="text-center mb-0 text-white">
+          &copy; {new Date().getFullYear()}; Powered by 93-media
+        </p>
+      </div>
     </>
   );
 };
