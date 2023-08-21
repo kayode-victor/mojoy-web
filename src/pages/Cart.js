@@ -34,6 +34,17 @@ const Cart = () => {
     setCartProduct(cartProducts);
   }, [cartProducts]);
 
+  useEffect(() => {
+    const storedCartProduct = localStorage.getItem("cartProduct");
+    console.log("Stored Cart Product:", storedCartProduct);
+    setCartProduct(
+      storedCartProduct ? JSON.parse(storedCartProduct) : cartProducts
+    );
+  }, [cartProducts]);
+
+  useEffect(() => {
+    localStorage.setItem("cartProduct", JSON.stringify(cartProduct));
+  }, [cartProduct]);
   // Update localStorage whenever cartProduct changes
   useEffect(() => {
     localStorage.setItem("cartProduct", JSON.stringify(cartProduct));
