@@ -15,10 +15,10 @@ const Cart = () => {
   const [productUpdateDetail, setProductUpdateDetail] = useState(null);
   const [totalAmount, setTotalAmount] = useState(null);
   const userCartState = useSelector((state) => state?.auth?.CartProducts);
-  const cartProducts = useSelector((state) => state?.auth?.CartProducts);
+
   const [cartProduct, setCartProduct] = useState(() => {
     const storedCartProduct = localStorage.getItem("cartProduct");
-    return storedCartProduct ? JSON.parse(storedCartProduct) : cartProducts;
+    return storedCartProduct ? JSON.parse(storedCartProduct) : userCartState;
   });
   useEffect(() => {
     let sum = 0;
