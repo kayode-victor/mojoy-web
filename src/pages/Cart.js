@@ -17,7 +17,7 @@ const Cart = () => {
   const userCartState = useSelector((state) => state?.auth?.CartProducts);
 
   const [cartProduct, setCartProduct] = useState(() => {
-    const storedCartProduct = localStorage.getItem("cartProduct");
+    const storedCartProduct = localStorage.getItem("cartProducts");
     return storedCartProduct ? JSON.parse(storedCartProduct) : userCartState;
   });
   useEffect(() => {
