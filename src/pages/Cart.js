@@ -22,29 +22,19 @@ const Cart = () => {
   });
   useEffect(() => {
     let sum = 0;
-    for (let index = 0; index < cartProduct?.length; index++) {
+    for (let index = 0; index < userCartState?.length; index++) {
       sum =
-        sum + Number(cartProduct[index].quantity) * cartProduct[index].price;
+        sum +
+        Number(userCartState[index].quantity) * userCartState[index].price;
       setTotalAmount(sum);
     }
-  }, [cartProduct]);
+  }, [userCartState]);
 
   // Sync cartProduct with the cartProducts from the Redux store
   useEffect(() => {
-    setCartProduct(cartProducts);
-  }, [cartProducts]);
+    setCartProduct(userCartState);
+  }, [userCartState]);
 
-  useEffect(() => {
-    const storedCartProduct = localStorage.getItem("cartProduct");
-    console.log("Stored Cart Product:", storedCartProduct);
-    setCartProduct(
-      storedCartProduct ? JSON.parse(storedCartProduct) : cartProducts
-    );
-  }, [cartProducts]);
-
-  useEffect(() => {
-    localStorage.setItem("cartProduct", JSON.stringify(cartProduct));
-  }, [cartProduct]);
   // Update localStorage whenever cartProduct changes
   useEffect(() => {
     localStorage.setItem("cartProduct", JSON.stringify(cartProduct));
